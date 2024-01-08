@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>html5</title>
+</head>
+<body>
+   <h1>몫과 나머지 구하기</h1>
+
+   <pre>
+      두개의 수 a, b 를 입력받아 
+      a를 b로 나눈 몫과 나머지를 출력하는 프로그램을 작성하시오.
+      (단, 각 수는 1이상 10000 이하의 정수이다.)
+
+      출력형식
+         몫:33, 나머지:1
+   </pre>
+
+   <hr />
+   
+<script>
+   while ( true ) {
+       const aPrint =prompt('a 값을 입력하세요');
+      const bPrint =prompt('b 값을 입력하세요');
+         const a= Number(aPrint);
+         const b= Number(bPrint);
+          
+      if (!(a >= 1 && a <= 10000) || !(b >= 1 && b <= 10000) || isNaN(a) || isNaN(b)) {
+         alert('다시입력');
+      } 
+      else {
+         /* 나머지는 % , 몫은 / */
+         const ur =function() {
+            return a / b ;
+         } ;
+         const mr=function() {
+            return a % b ;
+         };
+         
+         const result1 = ur();
+         const result2 = mr();
+         
+         document.write(`몫 : ${result1}, 나머지: ${result2}`);
+       /* 중요한거, 결과값 호출할 때 함수(function)를 직접호출하는게 아니라 결과값을 따로 const 선언 해줘야한다. */
+         break;
+      }
+   } // end of while
+   
+ </script>
+
+</body>
+</html>

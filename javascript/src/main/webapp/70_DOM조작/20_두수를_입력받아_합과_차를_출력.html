@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center">
+    <h1>입력받은 두 수의 합과 차를 출력</h1>
+
+    <button onclick="executeProgram()">프로그램 실행</button>
+    <pre>
+        문제) 버튼을 click하면 사용자로부터 입력받은 두수를 각각 x, y에 저장후
+        두 수의 합과 차를 sum, diff 변수에 할당하여 화면에 출력하시오.
+    </pre>
+
+    <h1>
+      입력받은 두수
+      <span class="x">?</span>,
+      <span class="y">?</span>
+      의 합과 차를 출력
+    </h1>
+
+    <h2>두수의 합 : <span class="sum">?</span></h2>
+
+    <h2>두수의 차(절대값) : <span class="diff">?</span></h2>
+
+    <button onclick="dddd()">프로그램 실행</button>
+
+    <!-- 결과를 출력할 엘리먼트 -->
+    <div id="result"></div>
+
+    <script>
+      // 프로그램 실행 함수
+      function executeProgram() {
+        let x = parseFloat(prompt("첫 번째 숫자를 입력하세요"));
+        let y = parseFloat(prompt("두 번째 숫자를 입력하세요"));
+
+        let sum = x + y;
+        let diff = x - y;
+
+        let resultElement = document.getElementById("result");
+
+        resultElement.innerHTML =
+          "입력받은 숫자: " +
+          "x값은" +
+          x +
+          ", " +
+          "y값은" +
+          y +
+          "<br/>합: " +
+          sum +
+          "<br/>차: " +
+          diff;
+      }
+      function dddd() {
+        let x = parseFloat(prompt("첫 번째 숫자를 입력하세요"));
+        let y = parseFloat(prompt("두 번째 숫자를 입력하세요"));
+
+        let add = x + y;
+        let diff = x - y;
+
+        let resultAdd = document.querySelector(".sum");
+        let resultDiff = document.querySelector(".diff");
+
+        resultAdd.innerHTML = add;
+        resultDiff.innerHTML = diff;
+      }
+    </script>
+  </body>
+</html>

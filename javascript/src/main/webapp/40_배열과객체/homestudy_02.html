@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>html5</title>
+</head>
+<body>
+	
+	<pre>요소의 값들을 출력하는 메소드 만들기</pre>
+
+	
+	
+	<script>
+
+	
+	//값을 입력받아 배열에 저장하는 함수
+	function inputArr(arr) {
+		const prinArr = [];
+		  for( let a = 0 ; a < 10 ; a++) {  
+			  prinArr[a] = parseInt(prompt("값을 입력하세요"))	 	
+		  }
+	}
+	
+	
+	//배열 안의 요소값을 출력해주는 함수 
+	function prinArr(arr) {
+		 for(let i = 0; i < 10 ; i++) {
+			  document.write(`${i}번째 값은 ${prinArr[i]} 입니다<br />`)
+		  }
+	}
+	
+	 //최대값을 구하는 알고리즘
+	/*
+    const arrFn = [];
+    let maxSum;
+     for(let a=0;a<10;a++){
+         arrFn[a] = parseInt(prompt(`${a}번째 함수를 입력해주세요`));
+     }
+     maxSum = arrFn[0];
+     for(let a=0;a<10;a++){
+         if(maxSum < arrFn[a]){
+             maxSum = arrFn[a];
+         }
+     }
+     document.write('최대값은 : '+maxSum + '입니다.<br /><hr />');
+																*/
+	
+	//값을 입력받아 배열에 저장하는 알고리즘
+	/*  const prinArr = [];
+	  for( let a = 0 ; a < 10 ; a++) {  
+		  prinArr[a] = parseInt(prompt("값을 입력하세요"))	 	
+	  }
+	  
+	  
+	//배열 안의 요소값을 출력해주는 알고리즘	
+	  for(let i = 0; i < 10 ; i++) {
+		  document.write(`${i}번째 값은 ${prinArr[i]} 입니다<br />`)
+	  }
+					*/
+	
+	</script>
+
+</body>
+</html>

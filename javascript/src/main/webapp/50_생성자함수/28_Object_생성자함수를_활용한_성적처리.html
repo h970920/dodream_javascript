@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>html5</title>
+</head>
+<body>
+	<h1>Object() 생성자함수를 활용한 성적처리</h1>
+	
+	<hr />
+	
+	<script>
+	const sungjuck= new Object(); // {} 빈객체
+	
+	sungjuck.kor = 90;
+	sungjuck.eng = 95;
+	sungjuck.math = 92;
+	
+	sungjuck.total = function(){
+		return this.kor + this.eng + this.math;
+	};
+	
+	sungjuck.avg = function(){
+		return this.total()/3;
+	};
+	
+	sungjuck.report = function(){
+		document.write(`총점:${this.total()}, 평균:${this.avg()}`);
+	};
+	
+	//출력
+	sungjuck.report();
+	
+	</script>
+</body>
+</html>

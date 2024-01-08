@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>자바스크립트</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        line-height: 100px;
+        text-align: center;
+      }
+
+      .cbox {
+        width: 150px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #000;
+      }
+
+      .cbox > p {
+        margin-bottom: 50px;
+        text-align: center;
+      }
+
+      .count {
+        font-weight: 800;
+        font-size: 30px;
+      }
+
+      button {
+        width: 40px;
+        height: 30px;
+      }
+
+      button:first-child {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>1씩 증가 또는 감소하는 카운터 프로그램</h1>
+
+    <div class="cbox">
+      <p class="count">7</p>
+      <p>
+        <button id="plus" onclick="pushBtn()">+</button>
+        <button id="minus" onclick="pushMbtn()">-</button>
+      </p>
+    </div>
+
+    <script>
+      function pushBtn() {
+        const number = document.querySelector(".count");
+        const z = Number(number.textContent);
+        let x = z + 1;
+        if (z >= 10) z = 10;
+        number.innerHTML = x;
+      }
+      function pushMbtn() {
+        const number = document.querySelector(".count");
+        const z = Number(number.textContent);
+        let x = z - 1;
+        if (z <= 0) z = 0;
+        number.innerHTML = x;
+      }
+    </script>
+  </body>
+</html>

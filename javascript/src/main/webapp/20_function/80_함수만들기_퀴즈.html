@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>html5</title>
+</head>
+<body>
+		<h1> 은행 예금하기 </h1>
+		<pre>
+			      문제) 현재 나의 통장잔액은 3만원이다.
+      
+         저금할 금액을 전달받아 합산해서 총액을 알려주는 함수를
+         선언 및 호출하고 싶다.
+
+         화면에 출력 => "현재 통장잔액은 35000원 입니다."
+
+         => 코딩시 필요한 변수는?
+            1. 함수명 : saveFn
+            2. 통장잔액변수 : totMoney
+            3. 매개변수 : money  
+		</pre>
+		
+		<hr />
+		
+		<script>
+		
+	
+		    let seedMoney = 30000;
+
+		    const num = prompt('예금할 금액을 입력하세요');
+		    const money = Number(num);
+
+		    const saveFn = function (money) {
+		        return money + seedMoney;
+		    }
+
+		    const totMoney = saveFn(money);
+		    document.write(`당신의 현재 잔액은 ${totMoney}원 입니다`);
+		
+		   
+		</script>
+</body>
+</html>

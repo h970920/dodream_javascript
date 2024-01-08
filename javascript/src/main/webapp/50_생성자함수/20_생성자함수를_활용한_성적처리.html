@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>html5</title>
+</head>
+<body>
+		<h1>생성자함수를 활용한 성적처리</h1>
+
+
+		<hr />
+		
+	<script>
+		//생성자함수 -> 설계도
+		function SungJuck(kor,eng,math){
+			this.kor = kor;
+			this.eng = eng;
+			this.math = math;
+			
+			this.total = function() {
+				return this.kor+this.eng+this.math;
+			};
+			
+			this.avg = function() {
+				return this.total()/3;
+			};
+			
+			this.report = function() {
+				document.write(`총점:${this.total()}, 평균:${this.avg()}`);
+			};
+			
+		}
+		
+		const sungjuck = new SungJuck(90,95,92);
+		sungjuck.report();
+	</script>
+</body>
+</html>

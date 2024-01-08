@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>html5</title>
+</head>
+<body>
+
+<pre> 배열안의 모든 값을 입력받고 합한값을 출력하기</pre>
+
+<script>
+	const sum = [] ;
+	let i= 0;
+	
+	while ( i < 5) {
+		const aprint = prompt('값을 입력해주세요');
+		const a = Number(aprint);
+		
+		if(isNaN(a)) {
+			alert('숫자를 입력해주세요')
+		} //end of if
+		else {
+			sum.push(a);
+			i++;
+			
+		} //end of else
+	} //end of while
+		
+		let a=0;
+	for ( let b=0; b<sum.length; b++ ) {
+		a+=sum[b];
+	}
+	console.log(a);
+			
+
+</script>
+</body>
+</html>
